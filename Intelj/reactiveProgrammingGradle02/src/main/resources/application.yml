@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+Spring:
+  profiles:
+    active: dev
+---
+Spring:
+  profiles: dev
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: local
+---
+Spring:
+  profiles: nonprod
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: local
+---
+Spring:
+  profiles: prod
+  data.mongodb:
+    host: localhost
+    port: 27017
+    database: local
